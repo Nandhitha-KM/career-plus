@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🚀 Career Plus</h1>
+  <h1>Career Plus</h1>
   <p><strong>A comprehensive, full-stack career and job application management platform.</strong></p>
 
   <!-- Badges -->
