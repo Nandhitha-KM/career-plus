@@ -18,7 +18,7 @@
   - [Installation & Setup](#installation--setup)
   - [Environment Variables](#environment-variables)
 - [Usage](#-usage)
-- [License](#-license)
+
 
 ---
 
