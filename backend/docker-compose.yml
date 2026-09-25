@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build:
+      context: .
+      dockerfile: services/api-gateway/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      # Add CORS allowed origins dynamically here later if needed
+    networks:
+      - backend
+    restart: always
+
+  auth-service:
+    build:
+      context: .
+      dockerfile: services/auth-service/Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlite:/app/data/auth_service.db
+    volumes:
+      - db-data:/app/data
+    networks:
+      - backend
+    restart: always
+
+  application-service:
+    build:
+      context: .
+      dockerfile: services/application-service/Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlite:/app/data/application_service.db
+    volumes:
+      - db-data:/app/data
+    networks:
+      - backend
+    restart: always
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  db-data:

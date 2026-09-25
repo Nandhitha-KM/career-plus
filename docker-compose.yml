@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: "./frontend"
+      dockerfile: Dockerfile
+    networks:
+      - fullstack-net
+    depends_on:
+      - api-gateway
+    restart: always
+
+  api-gateway:
+    build:
+      context: "./backend"
+      dockerfile: services/api-gateway/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    networks:
+      - fullstack-net
+    restart: always
+
+  auth-service:
+    build:
+      context: "./backend"
+      dockerfile: services/auth-service/Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlite:/app/data/auth_service.db
+    volumes:
+      - db-data:/app/data
+    networks:
+      - fullstack-net
+    restart: always
+
+  application-service:
+    build:
+      context: "./backend"
+      dockerfile: services/application-service/Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlite:/app/data/application_service.db
+    volumes:
+      - db-data:/app/data
+    networks:
+      - fullstack-net
+    restart: always
+
+  caddy:
+    image: caddy:alpine
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+    command: caddy reverse-proxy --from 35.222.239.2.nip.io --to frontend:80
+    networks:
+      - fullstack-net
+
+networks:
+  fullstack-net:
+    driver: bridge
+
+volumes:
+  db-data:
+  caddy_data:

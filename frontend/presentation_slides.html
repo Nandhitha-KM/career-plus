@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Plus — Project Presentation Deck</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .slide { display: none; }
+    .slide.active { display: flex; }
+  </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen flex flex-col justify-between selection:bg-violet-500 selection:text-white">
+
+  <!-- Header Bar -->
+  <header class="p-4 sm:p-6 border-b border-slate-800 flex items-center justify-between bg-slate-900/80 backdrop-blur-md">
+    <div class="flex items-center space-x-3">
+      <div class="w-9 h-9 rounded-xl bg-violet-600 flex items-center justify-center font-black text-white text-lg shadow-md shadow-violet-600/30">
+        CP
+      </div>
+      <div>
+        <h1 class="font-extrabold text-sm sm:text-base text-white">Career Plus — Job & Internship Tracker</h1>
+        <p class="text-[11px] text-slate-400">Microservice Architecture Presentation Deck</p>
+      </div>
+    </div>
+
+    <div class="flex items-center space-x-2 text-xs font-bold text-slate-400">
+      <span>Slide <span id="currentSlideNum" class="text-violet-400 font-extrabold text-sm">1</span> of 10</span>
+    </div>
+  </header>
+
+  <!-- Main Slide Container -->
+  <main class="flex-1 flex items-center justify-center p-4 sm:p-8 max-w-6xl w-full mx-auto">
+    
+    <!-- SLIDE 1: Title Slide -->
+    <div class="slide active flex-col items-center justify-center text-center space-y-6 animate-in fade-in duration-300 w-full">
+      <div class="inline-flex items-center space-x-2 bg-violet-500/10 border border-violet-500/30 px-4 py-1.5 rounded-full text-xs font-bold text-violet-300">
+        <span>🚀 Final Project Defense &amp; System Presentation</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white max-w-4xl leading-tight">
+        Job &amp; Internship <span class="bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">Application Tracker</span>
+      </h1>
+      
+      <p class="text-sm sm:text-lg text-slate-400 max-w-2xl font-medium">
+        A Distributed, Scalable Spring Boot Microservice Platform with Spring Cloud API Gateway &amp; Interactive React Frontend.
+      </p>
+
+      <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left w-full max-w-3xl">
+        <div class="p-3.5 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-[10px] font-extrabold uppercase text-slate-500">Presenter</p>
+          <p class="text-xs font-bold text-violet-300">Sangavi S</p>
+        </div>
+        <div class="p-3.5 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-[10px] font-extrabold uppercase text-slate-500">API Gateway</p>
+          <p class="text-xs font-bold text-emerald-400">Port 8080 (Netty)</p>
+        </div>
+        <div class="p-3.5 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-[10px] font-extrabold uppercase text-slate-500">Auth Service</p>
+          <p class="text-xs font-bold text-blue-400">Port 8081 (SQLite)</p>
+        </div>
+        <div class="p-3.5 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-[10px] font-extrabold uppercase text-slate-500">App Service</p>
+          <p class="text-xs font-bold text-amber-400">Port 8082 (SQLite)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: Problem Statement & Motivation -->
+    <div class="slide flex-col justify-center space-y-6 w-full">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-extrabold text-rose-400 uppercase tracking-wider">Slide 02 • Problem Statement</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Challenges Faced by Engineering Candidates</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="p-6 bg-slate-900/90 rounded-3xl border border-slate-800 space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-rose-500/10 text-rose-400 flex items-center justify-center font-bold text-lg">❌</div>
+          <h3 class="font-bold text-base text-white">Application Disorganization</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Job seekers apply to 50+ roles across LinkedIn, Indeed, and portals using static Excel files, resulting in lost records and confusion.</p>
+        </div>
+
+        <div class="p-6 bg-slate-900/90 rounded-3xl border border-slate-800 space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-lg">⏰</div>
+          <h3 class="font-bold text-base text-white">Missed Recruiter Follow-ups</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Over 65% of candidates forget to follow up with recruiters after 7 days of inactivity, losing critical hiring opportunities.</p>
+        </div>
+
+        <div class="p-6 bg-slate-900/90 rounded-3xl border border-slate-800 space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold text-lg">📊</div>
+          <h3 class="font-bold text-base text-white">Lack of Conversion Metrics</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Candidates lack visual data on interview conversion rates, CTC offer distributions, and pipeline stage velocity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: Proposed Solution -->
+    <div class="slide flex-col justify-center space-y-6 w-full">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-extrabold text-violet-400 uppercase tracking-wider">Slide 03 • Proposed Solution</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Career Plus — Unified Intelligent Platform</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-5 bg-slate-900/90 rounded-2xl border border-slate-800 flex items-start space-x-4">
+          <div class="w-8 h-8 rounded-xl bg-violet-600/20 text-violet-400 flex items-center justify-center font-bold">1</div>
+          <div>
+            <h4 class="font-bold text-sm text-white">Interactive Kanban Board</h4>
+            <p class="text-xs text-slate-400 mt-0.5">Drag-and-drop column tracking across Applied, Interviewing, Offered, and Rejected stages.</p>
+          </div>
+        </div>
+
+        <div class="p-5 bg-slate-900/90 rounded-2xl border border-slate-800 flex items-start space-x-4">
+          <div class="w-8 h-8 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center font-bold">2</div>
+          <div>
+            <h4 class="font-bold text-sm text-white">5-Step Rapid Application Wizard</h4>
+            <p class="text-xs text-slate-400 mt-0.5">Automated resume attachment, recruiter contacts, and salary band registration without review friction.</p>
+          </div>
+        </div>
+
+        <div class="p-5 bg-slate-900/90 rounded-2xl border border-slate-800 flex items-start space-x-4">
+          <div class="w-8 h-8 rounded-xl bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold">3</div>
+          <div>
+            <h4 class="font-bold text-sm text-white">Recruiter Follow-up Workspace</h4>
+            <p class="text-xs text-slate-400 mt-0.5">Yellow spotlight alert cards highlighting applications inactive for more than 7 days.</p>
+          </div>
+        </div>
+
+        <div class="p-5 bg-slate-900/90 rounded-2xl border border-slate-800 flex items-start space-x-4">
+          <div class="w-8 h-8 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold">4</div>
+          <div>
+            <h4 class="font-bold text-sm text-white">Real-Time Analytics &amp; Funnel</h4>
+            <p class="text-xs text-slate-400 mt-0.5">Visual progress breakdown across pipeline stages, offer win rates, and active interview shares.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: Architecture & Gateway Routing -->
+    <div class="slide flex-col justify-center space-y-6 w-full">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-wider">Slide 04 • System Architecture</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Microservices Topology &amp; Gateway Ports</h2>
+      </div>
+
+      <div class="p-6 bg-slate-900/90 rounded-3xl border border-slate-800 space-y-4">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 bg-slate-950 rounded-2xl border border-slate-800">
+          <div class="text-center sm:text-left">
+            <span class="text-[10px] font-extrabold text-violet-400 uppercase">React Frontend</span>
+            <p class="text-sm font-bold text-white">http://localhost:3000 / 3001</p>
+          </div>
+          <span class="text-slate-500 font-bold">➜ REST / JSON ➜</span>
+          <div class="text-center sm:text-left">
+            <span class="text-[10px] font-extrabold text-emerald-400 uppercase">Spring Cloud API Gateway</span>
+            <p class="text-sm font-bold text-white">http://localhost:8080</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 space-y-1">
+            <span class="text-[10px] font-extrabold text-blue-400 uppercase">1. Auth Microservice (Port 8081)</span>
+            <p class="text-xs font-bold text-white">/api/auth/**</p>
+            <p class="text-[11px] text-slate-400">Signup, Login, Password Reset, Google OAuth 2.0, JWT Tokens (`auth_service.db`)</p>
+          </div>
+
+          <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 space-y-1">
+            <span class="text-[10px] font-extrabold text-amber-400 uppercase">2. Application Microservice (Port 8082)</span>
+            <p class="text-xs font-bold text-white">/api/applications/**, /api/actions/**, /api/analytics/**</p>
+            <p class="text-[11px] text-slate-400">Application CRUD, Today's Actions, Priority Engine, Resumes (`application_service.db`)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: 5-Step Application Wizard -->
+    <div class="slide flex-col justify-center space-y-6 w-full">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-extrabold text-indigo-400 uppercase tracking-wider">Slide 05 • User Experience</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">5-Step Sequential Application Wizard</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-center">
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2">
+          <div class="w-7 h-7 rounded-full bg-blue-600 text-white font-bold text-xs mx-auto flex items-center justify-center">1</div>
+          <p class="text-xs font-bold text-white">Job Info</p>
+          <p class="text-[10px] text-slate-400">Company, Title, Location, Work Mode</p>
+        </div>
+
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2">
+          <div class="w-7 h-7 rounded-full bg-blue-600 text-white font-bold text-xs mx-auto flex items-center justify-center">2</div>
+          <p class="text-xs font-bold text-white">Recruiter</p>
+          <p class="text-[10px] text-slate-400">HR Name, Email, Phone, CTC Band</p>
+        </div>
+
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2">
+          <div class="w-7 h-7 rounded-full bg-blue-600 text-white font-bold text-xs mx-auto flex items-center justify-center">3</div>
+          <p class="text-xs font-bold text-white">Resume</p>
+          <p class="text-[10px] text-slate-400">Profile Resume Select or PDF Upload</p>
+        </div>
+
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2">
+          <div class="w-7 h-7 rounded-full bg-blue-600 text-white font-bold text-xs mx-auto flex items-center justify-center">4</div>
+          <p class="text-xs font-bold text-white">Interview</p>
+          <p class="text-[10px] text-slate-400">Round, Date/Time, Video Format</p>
+        </div>
+
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-emerald-500/50 space-y-2">
+          <div class="w-7 h-7 rounded-full bg-emerald-500 text-white font-bold text-xs mx-auto flex items-center justify-center">5</div>
+          <p class="text-xs font-bold text-emerald-400">Finish &amp; Save</p>
+          <p class="text-[10px] text-slate-400">Skills &amp; Notes → Auto Save</p>
+        </div>
+      </div>
+
+      <div class="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl text-xs text-emerald-300 font-medium">
+        ⚡ <strong>Frictionless UX:</strong> Review Step 6 was completely removed so clicking "Finish &amp; Save Application" on Step 5 immediately posts to the database and renders the job card on the Kanban board.
+      </div>
+    </div>
+
+    <!-- SLIDE 6: Today's Actions & Popups -->
+    <div class="slide flex-col justify-center space-y-6 w-full">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-extrabold text-amber-400 uppercase tracking-wider">Slide 06 • Module Spotlight</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Today's Action List &amp; Interactive Popups</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="p-5 bg-slate-900/90 rounded-3xl border border-rose-500/30 space-y-3">
+          <span class="text-[10px] font-extrabold uppercase text-rose-400 bg-rose-500/10 px-2.5 py-1 rounded-md">Action 1: High Priority Follow-ups</span>
+          <h4 class="font-bold text-sm text-white">Overdue Recruiter Action Card</h4>
+          <p class="text-xs text-slate-400">Triggers an instant detail popup window displaying recruiter email, phone contact, and application dates.</p>
+        </div>
+
+        <div class="p-5 bg-slate-900/90 rounded-3xl border border-amber-500/30 space-y-3">
+          <span class="text-[10px] font-extrabold uppercase text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md">Action 2: Upcoming Interviews</span>
+          <h4 class="font-bold text-sm text-white">Interview Prep Notes Popup</h4>
+          <p class="text-xs text-slate-400">Opens technical round notes, video interview links, and preparation checklists with a single click.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: Analytics Overview -->
+    <div class="slide flex-col justify-center space-y-6 w-full">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-extrabold text-blue-400 uppercase tracking-wider">Slide 07 • Data Analytics</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Analytics &amp; Pipeline Conversion Funnel</h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-[10px] font-extrabold uppercase text-blue-400">Active Pipeline</p>
+          <p class="text-2xl font-black text-white">100%</p>
+        </div>
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-[10px] font-extrabold uppercase text-indigo-400">Applied Share</p>
+          <p class="text-2xl font-black text-white">100%</p>
+        </div>
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-[10px] font-extrabold uppercase text-amber-400">Interview Rate</p>
+          <p class="text-2xl font-black text-white">0%</p>
+        </div>
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-[10px] font-extrabold uppercase text-emerald-400">Offer Win Rate</p>
+          <p class="text-2xl font-black text-white">0%</p>
+        </div>
+      </div>
+
+      <div class="p-5 bg-slate-900/90 rounded-3xl border border-slate-800 space-y-2">
+        <h4 class="font-bold text-xs uppercase text-slate-400">Conversion Funnel Visualizer</h4>
+        <div class="space-y-2 pt-1 text-xs">
+          <div>
+            <div class="flex justify-between font-bold text-blue-400 mb-1"><span>1. Applied Stage</span><span>1 Application (100%)</span></div>
+            <div class="w-full h-2.5 bg-slate-800 rounded-full"><div class="h-full bg-blue-500 rounded-full w-full"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: Engineering Challenges & Fixes -->
+    <div class="slide flex-col justify-center space-y-6 w-full">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-extrabold text-rose-400 uppercase tracking-wider">Slide 08 • Technical Successes</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Engineering Challenges &amp; Resolved Issues</h2>
+      </div>
+
+      <div class="space-y-3">
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <h4 class="font-bold text-sm text-emerald-400">1. Deduplicated CORS Preflight Filter</h4>
+          <p class="text-xs text-slate-400">Configured `@Order(Ordered.HIGHEST_PRECEDENCE)` `CorsWebFilter` in API Gateway to approve all preflight `OPTIONS` requests instantly with `200 OK`.</p>
+        </div>
+
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <h4 class="font-bold text-sm text-emerald-400">2. Flexible JSON Deserializer &amp; String IDs</h4>
+          <p class="text-xs text-slate-400">Added custom `@JsonSetter("id")` in `Application.java` catching client string IDs (`job-1787727786433`) and stripping them so SQLite auto-generates numeric IDs without 400 Bad Request errors.</p>
+        </div>
+
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <h4 class="font-bold text-sm text-emerald-400">3. Regex Path Mapping Protection</h4>
+          <p class="text-xs text-slate-400">Configured `@GetMapping("/{id:[0-9]+}")` to prevent wildcard `{id}` matching against `/actions/today` and `/analytics/insights` routes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: Project Clean Header UI -->
+    <div class="slide flex-col justify-center space-y-6 w-full">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-extrabold text-purple-400 uppercase tracking-wider">Slide 09 • UI Refinement</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Clean &amp; Minimalist Candidate Header</h2>
+      </div>
+
+      <div class="p-8 bg-slate-900/90 rounded-3xl border border-slate-800 text-center space-y-4">
+        <h3 class="text-3xl font-extrabold text-white">Welcome, <span class="text-violet-400">sangavi s</span></h3>
+        <p class="text-sm font-semibold text-slate-400">Job &amp; Internship Application Tracker</p>
+        
+        <div class="pt-4 border-t border-slate-800/80 text-xs text-slate-500">
+          ✨ Removed technical badges and clutter (`Spring Boot REST API Integrated`, `Port 8080 Connected`) for a polished, candidate-facing aesthetic.
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: Conclusion & Roadmap -->
+    <div class="slide flex-col justify-center space-y-6 w-full text-center">
+      <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/30 px-4 py-1.5 rounded-full text-xs font-bold text-emerald-400 mx-auto">
+        <span>🎉 Project Status: 100% Fully Completed</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">Summary &amp; Future Scope</h2>
+      
+      <p class="text-sm text-slate-400 max-w-2xl mx-auto">
+        Career Plus successfully provides an intuitive, robust, and scalable platform empowering candidates to manage their career search effectively.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left">
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-xs font-bold text-violet-300">1. AI Resume ATS Scoring</p>
+          <p class="text-[11px] text-slate-400">Automatic job description keyword matching.</p>
+        </div>
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-xs font-bold text-violet-300">2. Automated Follow-up Emailer</p>
+          <p class="text-[11px] text-slate-400">1-click recruiter email dispatcher.</p>
+        </div>
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-1">
+          <p class="text-xs font-bold text-violet-300">3. Mobile Native App</p>
+          <p class="text-[11px] text-slate-400">React Native iOS and Android integration.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer Navigation Controls -->
+  <footer class="p-4 sm:p-6 border-t border-slate-800 bg-slate-900/80 backdrop-blur-md flex items-center justify-between">
+    <button id="prevBtn" onclick="changeSlide(-1)" class="px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 text-xs font-bold text-slate-300 hover:bg-slate-700 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+      ← Previous Slide
+    </button>
+
+    <div class="hidden sm:flex space-x-1.5" id="dotsContainer">
+      <!-- Dots injected dynamically -->
+    </div>
+
+    <button id="nextBtn" onclick="changeSlide(1)" class="px-5 py-2.5 rounded-xl bg-violet-600 text-xs font-bold text-white hover:bg-violet-500 shadow-md shadow-violet-600/30 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+      Next Slide →
+    </button>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const currentSlideNumEl = document.getElementById('currentSlideNum');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('dotsContainer');
+
+    // Create dots
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.className = `w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${i === 0 ? 'bg-violet-500 w-6' : 'bg-slate-700'}`;
+      dot.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(dot);
+    }
+
+    function updateSlides() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+      currentSlideNumEl.textContent = currentSlide + 1;
+      
+      prevBtn.disabled = currentSlide === 0;
+      nextBtn.disabled = currentSlide === totalSlides - 1;
+
+      // Update dots
+      const dots = dotsContainer.children;
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = `w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${i === currentSlide ? 'bg-violet-500 w-6' : 'bg-slate-700'}`;
+      }
+    }
+
+    function changeSlide(direction) {
+      currentSlide = Math.min(Math.max(currentSlide + direction, 0), totalSlides - 1);
+      updateSlides();
+    }
+
+    function goToSlide(idx) {
+      currentSlide = idx;
+      updateSlides();
+    }
+
+    // Keyboard navigation (Left / Right Arrow)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') changeSlide(1);
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+
+    updateSlides();
+  </script>
+</body>
+</html>

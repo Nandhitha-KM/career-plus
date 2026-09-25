@@ -1,0 +1,17 @@
+runtime: nodejs20
+instance_class: F1
+
+handlers:
+  # Serve static files from dist/assets
+  - url: /assets
+    static_dir: dist/assets
+
+  # Serve favicon / static files
+  - url: /(.*\.(png|jpg|jpeg|gif|ico|svg|css|js|json))
+    static_files: dist/\1
+    upload: dist/(.*\.(png|jpg|jpeg|gif|ico|svg|css|js|json))
+
+  # Catch-all handler for React client-side routing
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html
