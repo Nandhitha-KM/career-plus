@@ -3,14 +3,7 @@
   <p><strong>A comprehensive, full-stack career and job application management platform.</strong></p>
 
   <!-- Badges -->
-  <p>
-    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot" alt="Spring Boot" />
-    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-    <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
-  </p>
+
 </div>
 
 <br />
@@ -149,11 +142,4 @@ Once both servers are running, navigate to `http://localhost:5173` in your brows
 
 ---
 
-## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
-<br />
-<div align="center">
-  <i>Built with passion to empower job seekers everywhere.</i>
-</div>
